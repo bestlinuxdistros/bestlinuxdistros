@@ -1,0 +1,2311 @@
+[
+    {
+        "id": "ubuntu",
+        "name": "Ubuntu",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo-ubuntu_cof-orange-hex.svg",
+        "website": "https://ubuntu.com",
+        "origin": "Isle of Man",
+        "first_release": "2004",
+        "status": "Active",
+        "description": "Ubuntu is a Debian-based Linux distribution known for its ease of use, stability, and large community.",
+        "desktop": "GNOME",
+        "package_manager": "APT",
+        "category": "Beginner-friendly",
+        "architecture": [
+            "x86_64",
+            "ARM"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Friendly installer and sensible defaults",
+            "Very beginner-friendly",
+            "Long-Term Support releases"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Limited deep customization out of the box",
+            "Heavier than minimalist distributions"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Home productivity",
+                "Enterprise desktop"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "New Linux switchers",
+                "Cloud workloads"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "4 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "APT (Advanced Package Tool) uses curated .deb packages inherited from Debian/Ubuntu with dependable dependency resolution.",
+        "target_users": [
+            "Desktop users",
+            "Beginners",
+            "Developers"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Ubuntu+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Ubuntu+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 10,
+            "power_user_score": 7,
+            "stability_score": 9
+        },
+        "download_url": "https://ubuntu.com/download/desktop",
+        "badges": [
+            "Beginner-friendly",
+            "Great for developers",
+            "Secure",
+            "Good for gaming"
+        ],
+        "family": "Debian-based"
+    },
+    {
+        "id": "debian",
+        "name": "Debian",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/6/66/Openlogo-debianV2.svg",
+        "website": "https://www.debian.org/",
+        "origin": "Global",
+        "first_release": "1993",
+        "status": "Active",
+        "description": "Debian is a free operating system using the Linux kernel, known for stability and a large package repository.",
+        "desktop": "Multiple (GNOME, KDE, XFCE, LXDE)",
+        "package_manager": "APT",
+        "category": "Universal",
+        "architecture": [
+            "x86_64",
+            "ARM",
+            "PowerPC"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Rock-solid stability"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Conservative release cadence"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "4 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "APT (Advanced Package Tool) uses curated .deb packages inherited from Debian/Ubuntu with dependable dependency resolution.",
+        "target_users": [
+            "Desktop users",
+            "Server admins"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Debian+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Debian+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Low",
+            "beginner_score": 7,
+            "power_user_score": 8,
+            "stability_score": 10
+        },
+        "download_url": "https://www.debian.org/distrib/",
+        "badges": [
+            "Secure",
+            "Great for developers",
+            "Fast performance"
+        ],
+        "family": "Debian"
+    },
+    {
+        "id": "fedora",
+        "name": "Fedora",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Fedora_logo.svg",
+        "website": "https://getfedora.org",
+        "origin": "USA",
+        "first_release": "2003",
+        "status": "Active",
+        "description": "Fedora is a cutting-edge Linux distribution sponsored by Red Hat, focused on innovation.",
+        "desktop": "GNOME",
+        "package_manager": "DNF",
+        "category": "Advanced / Developer",
+        "architecture": [
+            "x86_64",
+            "ARM"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Rolling access to the latest packages",
+            "Cutting-edge GNOME experience"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Steeper learning curve for newcomers",
+            "Lifecycle is only ~13 months"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Custom workstation builds"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Tinkerers and builders"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "4 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "DNF is Fedora and RHEL's modern RPM manager with modular repos, delta RPMs, and strong dependency solving.",
+        "target_users": [
+            "Desktop users",
+            "Power users",
+            "Developers"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Fedora+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Fedora+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 6,
+            "power_user_score": 8,
+            "stability_score": 8
+        },
+        "download_url": "https://getfedora.org/",
+        "badges": [
+            "Great for developers",
+            "Secure",
+            "Fast performance"
+        ],
+        "family": "Fedora/RPM"
+    },
+    {
+        "id": "arch",
+        "name": "Arch Linux",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Archlinux-icon-crystal-64.svg",
+        "website": "https://archlinux.org",
+        "origin": "USA",
+        "first_release": "2002",
+        "status": "Active",
+        "description": "Arch Linux is a lightweight and flexible rolling-release distribution targeted at advanced users.",
+        "desktop": "Any",
+        "package_manager": "Pacman",
+        "category": "Advanced",
+        "architecture": [
+            "x86_64"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Rolling access to the latest packages",
+            "Rolling release with bleeding-edge packages"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Steeper learning curve for newcomers",
+            "Manual installation and configuration required"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Custom workstation builds"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Tinkerers and builders"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "4 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "Pacman manages simple .pkg.tar packages with lightning-fast sync and full access to the Arch repositories/AUR.",
+        "target_users": [
+            "Desktop users",
+            "Power users"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Arch%2BLinux+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Arch%2BLinux+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Fast",
+            "resource_usage": "Low",
+            "beginner_score": 3,
+            "power_user_score": 10,
+            "stability_score": 7
+        },
+        "download_url": "https://archlinux.org/download/",
+        "badges": [
+            "Great for developers",
+            "Fast performance",
+            "Lightweight"
+        ],
+        "family": "Arch-based"
+    },
+    {
+        "id": "manjaro",
+        "name": "Manjaro",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Manjaro-logo.svg",
+        "website": "https://manjaro.org",
+        "origin": "Germany",
+        "first_release": "2011",
+        "status": "Active",
+        "description": "Manjaro is an Arch-based Linux distribution focused on ease of use and stability.",
+        "desktop": "XFCE / KDE / GNOME",
+        "package_manager": "Pacman",
+        "category": "Intermediate",
+        "architecture": [
+            "x86_64"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Arch base with guided installer"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Slight delay on package updates"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "4 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "Pacman manages simple .pkg.tar packages with lightning-fast sync and full access to the Arch repositories/AUR.",
+        "target_users": [
+            "Desktop users"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Manjaro+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Manjaro+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Fast",
+            "resource_usage": "Medium",
+            "beginner_score": 6,
+            "power_user_score": 8,
+            "stability_score": 8
+        },
+        "download_url": "https://manjaro.org/downloads/",
+        "badges": [
+            "Beginner-friendly",
+            "Great for developers",
+            "Fast performance"
+        ],
+        "family": "Arch-based"
+    },
+    {
+        "id": "mint",
+        "name": "Linux Mint",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Linux_Mint_logo_without_wordmark.svg",
+        "website": "https://linuxmint.com",
+        "origin": "Ireland",
+        "first_release": "2006",
+        "status": "Active",
+        "description": "Linux Mint is an Ubuntu-based distribution that aims to be modern, elegant, and easy to use.",
+        "desktop": "Cinnamon / MATE / XFCE",
+        "package_manager": "APT",
+        "category": "Beginner-friendly",
+        "architecture": [
+            "x86_64"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Friendly installer and sensible defaults",
+            "Cinnamon desktop feels familiar to Windows users"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Limited deep customization out of the box",
+            "Updates lag behind upstream Ubuntu"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Home productivity"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "New Linux switchers"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "4 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "APT (Advanced Package Tool) uses curated .deb packages inherited from Debian/Ubuntu with dependable dependency resolution.",
+        "target_users": [
+            "Desktop users",
+            "Beginners"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Linux%2BMint+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Linux%2BMint+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Low",
+            "beginner_score": 9,
+            "power_user_score": 6,
+            "stability_score": 9
+        },
+        "download_url": "https://linuxmint.com/download.php",
+        "badges": [
+            "Beginner-friendly",
+            "Secure",
+            "Lightweight"
+        ],
+        "family": "Ubuntu-based"
+    },
+    {
+        "id": "popos",
+        "name": "Pop!_OS",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Pop%21_OS_logo.svg",
+        "website": "https://pop.system76.com",
+        "origin": "USA",
+        "first_release": "2017",
+        "status": "Active",
+        "description": "Pop!_OS is developed by System76, optimized for creators, developers, and STEM users.",
+        "desktop": "COSMIC (custom GNOME)",
+        "package_manager": "APT",
+        "category": "Developer / Productivity",
+        "architecture": [
+            "x86_64"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Rolling access to the latest packages",
+            "Great hybrid graphics handling"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Steeper learning curve for newcomers",
+            "Focused on System76 hardware support"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Custom workstation builds"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Tinkerers and builders"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "4 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "APT (Advanced Package Tool) uses curated .deb packages inherited from Debian/Ubuntu with dependable dependency resolution.",
+        "target_users": [
+            "Desktop users",
+            "Power users",
+            "Creators"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Pop!_OS+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Pop!_OS+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Fast",
+            "resource_usage": "Medium",
+            "beginner_score": 7,
+            "power_user_score": 8,
+            "stability_score": 8
+        },
+        "download_url": "https://pop.system76.com/",
+        "badges": [
+            "Great for developers",
+            "Good for gaming",
+            "Secure"
+        ],
+        "family": "Ubuntu-based"
+    },
+    {
+        "id": "zorin",
+        "name": "Zorin OS",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Zorin_OS_logo_2021.svg",
+        "website": "https://zorin.com/os",
+        "origin": "Ireland",
+        "first_release": "2009",
+        "status": "Active",
+        "description": "Zorin OS is a beginner-friendly Ubuntu-based distribution designed to look familiar to Windows users.",
+        "desktop": "Zorin Desktop (GNOME)",
+        "package_manager": "APT",
+        "category": "Beginner-friendly",
+        "architecture": [
+            "x86_64"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Friendly installer and sensible defaults",
+            "Windows-like layout options"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Limited deep customization out of the box"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Home productivity"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "New Linux switchers"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "4 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "APT (Advanced Package Tool) uses curated .deb packages inherited from Debian/Ubuntu with dependable dependency resolution.",
+        "target_users": [
+            "Desktop users",
+            "Beginners"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Zorin%2BOS+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Zorin%2BOS+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 9,
+            "power_user_score": 7,
+            "stability_score": 8
+        },
+        "download_url": "https://zorin.com/os/download/",
+        "badges": [
+            "Beginner-friendly",
+            "Good for gaming",
+            "Secure"
+        ],
+        "family": "Ubuntu-based"
+    },
+    {
+        "id": "kali",
+        "name": "Kali Linux",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Kali-dragon-icon.svg",
+        "website": "https://kali.org",
+        "origin": "USA",
+        "first_release": "2013",
+        "status": "Active",
+        "description": "Kali Linux is a Debian-based penetration testing and digital forensics distribution.",
+        "desktop": "XFCE / GNOME / KDE",
+        "package_manager": "APT",
+        "category": "Security / PenTesting",
+        "architecture": [
+            "x86_64",
+            "ARM"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Ships with security tooling ready to go",
+            "Includes hundreds of offensive security tools"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Not intended for casual daily use",
+            "Not optimized for daily productivity tasks"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Penetration testing"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Security labs"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "8 GB",
+                "storage": "60 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "4 GB",
+                "storage": "30 GB"
+            }
+        },
+        "package_manager_explained": "APT (Advanced Package Tool) uses curated .deb packages inherited from Debian/Ubuntu with dependable dependency resolution.",
+        "target_users": [
+            "Desktop users",
+            "Security researchers",
+            "Security professionals"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Kali%2BLinux+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Kali%2BLinux+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 2,
+            "power_user_score": 9,
+            "stability_score": 8
+        },
+        "download_url": "https://www.kali.org/get-kali/",
+        "badges": [
+            "Great for developers",
+            "Secure",
+            "Fast performance"
+        ],
+        "family": "Debian-based"
+    },
+    {
+        "id": "rhel",
+        "name": "Red Hat Enterprise Linux",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Red_Hat_logo.svg",
+        "website": "https://redhat.com",
+        "origin": "USA",
+        "first_release": "2000",
+        "status": "Active",
+        "description": "RHEL is a commercial Linux distribution optimized for enterprise deployments.",
+        "desktop": "GNOME",
+        "package_manager": "DNF",
+        "category": "Enterprise / Server",
+        "architecture": [
+            "x86_64",
+            "ARM"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Enterprise-grade stability",
+            "Enterprise support contracts"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Requires admin experience to tune",
+            "Requires subscription for official repos"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Infrastructure / DevOps"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Servers"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores / Xeon class",
+                "ram": "8 GB",
+                "storage": "80 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "DNF is Fedora and RHEL's modern RPM manager with modular repos, delta RPMs, and strong dependency solving.",
+        "target_users": [
+            "Desktop users",
+            "Sysadmins",
+            "IT departments"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Red%2BHat%2BEnterprise%2BLinux+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Red%2BHat%2BEnterprise%2BLinux+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 5,
+            "power_user_score": 8,
+            "stability_score": 10
+        },
+        "download_url": "https://developers.redhat.com/products/rhel/download",
+        "badges": [
+            "Secure",
+            "Great for developers",
+            "Fast performance"
+        ],
+        "family": "RPM"
+    },
+    {
+        "id": "elementary",
+        "name": "elementary OS",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Elementary_logo.svg",
+        "website": "https://elementary.io",
+        "origin": "USA",
+        "first_release": "2011",
+        "status": "Active",
+        "description": "elementary OS focuses on a clean Pantheon desktop and curated apps for distraction-free computing.",
+        "desktop": "Pantheon",
+        "package_manager": "APT",
+        "category": "Beginner-friendly",
+        "architecture": [
+            "x86_64"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Friendly installer and sensible defaults"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Limited deep customization out of the box"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Home productivity"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "New Linux switchers"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "4 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "APT (Advanced Package Tool) uses curated .deb packages inherited from Debian/Ubuntu with dependable dependency resolution.",
+        "target_users": [
+            "Desktop users",
+            "Beginners"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=elementary%2BOS+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=elementary%2BOS+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 9,
+            "power_user_score": 7,
+            "stability_score": 8
+        },
+        "download_url": "https://elementary.io/",
+        "badges": [
+            "Beginner-friendly",
+            "Lightweight",
+            "Secure"
+        ],
+        "family": "Ubuntu-based"
+    },
+    {
+        "id": "mxlinux",
+        "name": "MX Linux",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/2/20/MX_Linux_logo.svg",
+        "website": "https://mxlinux.org",
+        "origin": "Greece / USA",
+        "first_release": "2014",
+        "status": "Active",
+        "description": "MX Linux combines Debian Stable with thoughtful tools aimed at everyday desktop productivity.",
+        "desktop": "XFCE / KDE / Fluxbox",
+        "package_manager": "APT",
+        "category": "Beginner-friendly",
+        "architecture": [
+            "x86_64",
+            "ARM"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Friendly installer and sensible defaults"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Limited deep customization out of the box"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Home productivity"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "New Linux switchers"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "4 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "APT (Advanced Package Tool) uses curated .deb packages inherited from Debian/Ubuntu with dependable dependency resolution.",
+        "target_users": [
+            "Desktop users",
+            "Beginners"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=MX%2BLinux+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=MX%2BLinux+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 9,
+            "power_user_score": 7,
+            "stability_score": 8
+        },
+        "download_url": "https://mxlinux.org/download-links/",
+        "badges": [
+            "Beginner-friendly",
+            "Lightweight",
+            "Fast performance"
+        ],
+        "family": "Debian-based"
+    },
+    {
+        "id": "opensuse",
+        "name": "openSUSE",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4f/OpenSUSE_Logo.svg",
+        "website": "https://www.opensuse.org",
+        "origin": "Germany",
+        "first_release": "2005",
+        "status": "Active",
+        "description": "openSUSE Leap and Tumbleweed deliver both enterprise-stable and rolling-release options.",
+        "desktop": "KDE Plasma / GNOME",
+        "package_manager": "Zypper",
+        "category": "Intermediate / Server",
+        "architecture": [
+            "x86_64",
+            "ARM"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Enterprise-grade stability"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Requires admin experience to tune"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Infrastructure / DevOps"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Servers"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores / Xeon class",
+                "ram": "8 GB",
+                "storage": "80 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "Zypper is openSUSE's command-line frontend to libzypp, offering transactional updates and pattern-based installs.",
+        "target_users": [
+            "Desktop users",
+            "Sysadmins"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=openSUSE+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=openSUSE+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 5,
+            "power_user_score": 8,
+            "stability_score": 9
+        },
+        "download_url": "https://get.opensuse.org/",
+        "badges": [
+            "Great for developers",
+            "Secure",
+            "Fast performance"
+        ],
+        "family": "openSUSE"
+    },
+    {
+        "id": "gentoo",
+        "name": "Gentoo",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/0/04/Gentoo_linux_logo_matte.svg",
+        "website": "https://gentoo.org",
+        "origin": "Global",
+        "first_release": "2002",
+        "status": "Active",
+        "description": "Gentoo is a source-based distribution giving power users fine-grained control via Portage.",
+        "desktop": "Any",
+        "package_manager": "Portage",
+        "category": "Advanced / Source-based",
+        "architecture": [
+            "x86_64",
+            "ARM",
+            "PowerPC"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Rolling access to the latest packages",
+            "Compile-time optimization via USE flags"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Steeper learning curve for newcomers",
+            "Long install/configuration time"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Custom workstation builds"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Tinkerers and builders"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "4 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "Portage compiles packages from source via ebuild recipes, giving Gentoo users extreme control over USE flags.",
+        "target_users": [
+            "Desktop users",
+            "Power users",
+            "Source-based enthusiasts"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Gentoo+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Gentoo+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Fast",
+            "resource_usage": "Low",
+            "beginner_score": 2,
+            "power_user_score": 10,
+            "stability_score": 8
+        },
+        "download_url": "https://www.gentoo.org/downloads/",
+        "badges": [
+            "Great for developers",
+            "Fast performance",
+            "Lightweight"
+        ],
+        "family": "Gentoo"
+    },
+    {
+        "id": "slackware",
+        "name": "Slackware",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/3/35/Slackware_logo.svg",
+        "website": "http://www.slackware.com",
+        "origin": "USA",
+        "first_release": "1993",
+        "status": "Active",
+        "description": "Slackware is one of the oldest surviving distributions, emphasizing simplicity and Unix-like design.",
+        "desktop": "KDE / XFCE",
+        "package_manager": "pkgtool",
+        "category": "Advanced",
+        "architecture": [
+            "x86_64"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Rolling access to the latest packages"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Steeper learning curve for newcomers"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Custom workstation builds"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Tinkerers and builders"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "4 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "Slackware's pkgtool keeps things simple with tar-based packages and minimal automation.",
+        "target_users": [
+            "Desktop users",
+            "Power users"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Slackware+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Slackware+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 5,
+            "power_user_score": 9,
+            "stability_score": 8
+        },
+        "download_url": "http://www.slackware.com/getslack/",
+        "badges": [
+            "Great for developers",
+            "Fast performance",
+            "Secure"
+        ],
+        "family": "Slackware"
+    },
+    {
+        "id": "alpine",
+        "name": "Alpine Linux",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Alpine_Linux_logo.svg",
+        "website": "https://alpinelinux.org",
+        "origin": "Global",
+        "first_release": "2005",
+        "status": "Active",
+        "description": "Alpine Linux is a security-oriented, musl-based distribution commonly used in containers and appliances.",
+        "desktop": "Minimal",
+        "package_manager": "apk",
+        "category": "Server / Minimal",
+        "architecture": [
+            "x86_64",
+            "ARM"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Enterprise-grade stability",
+            "Musl/busybox base with tiny footprint"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Requires admin experience to tune",
+            "Limited desktop tooling out of the box"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Infrastructure / DevOps"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Servers"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "16 GB"
+            },
+            "minimum": {
+                "cpu": "1 core",
+                "ram": "512 MB",
+                "storage": "5 GB"
+            }
+        },
+        "package_manager_explained": "apk-tools power Alpine's tiny musl/busybox based packages and are tuned for container and embedded workflows.",
+        "target_users": [
+            "Desktop users",
+            "Sysadmins",
+            "Container builders"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Alpine%2BLinux+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Alpine%2BLinux+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Fast",
+            "resource_usage": "Low",
+            "beginner_score": 4,
+            "power_user_score": 8,
+            "stability_score": 8
+        },
+        "download_url": "https://alpinelinux.org/downloads/",
+        "badges": [
+            "Lightweight",
+            "Fast performance",
+            "Secure"
+        ],
+        "family": "Alpine"
+    },
+    {
+        "id": "tails",
+        "name": "Tails",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Tails_logo.svg",
+        "website": "https://tails.boum.org",
+        "origin": "Global",
+        "first_release": "2009",
+        "status": "Active",
+        "description": "Tails routes all traffic through Tor and is designed for amnesic, privacy-preserving sessions.",
+        "desktop": "GNOME",
+        "package_manager": "APT",
+        "category": "Security / Privacy",
+        "architecture": [
+            "x86_64"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Ships with security tooling ready to go",
+            "Routes traffic through Tor by default"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Not intended for casual daily use",
+            "Sessions are non-persistent unless configured"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Penetration testing"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Security labs",
+                "Live USB usage"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "8 GB",
+                "storage": "60 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "4 GB",
+                "storage": "30 GB"
+            }
+        },
+        "package_manager_explained": "APT (Advanced Package Tool) uses curated .deb packages inherited from Debian/Ubuntu with dependable dependency resolution.",
+        "target_users": [
+            "Desktop users",
+            "Security researchers",
+            "Privacy advocates"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Tails+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Tails+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 5,
+            "power_user_score": 7,
+            "stability_score": 7
+        },
+        "download_url": "https://tails.net/install/",
+        "badges": [
+            "Secure",
+            "Lightweight"
+        ],
+        "family": "Debian-based"
+    },
+    {
+        "id": "parrot",
+        "name": "Parrot OS",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/4/45/Parrot_logo.png",
+        "website": "https://parrotsec.org",
+        "origin": "Italy",
+        "first_release": "2013",
+        "status": "Active",
+        "description": "Parrot OS blends penetration testing, digital forensics, and privacy tooling on a Debian base.",
+        "desktop": "MATE / KDE",
+        "package_manager": "APT",
+        "category": "Security / PenTesting",
+        "architecture": [
+            "x86_64",
+            "ARM"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Ships with security tooling ready to go",
+            "Balances pen-testing and privacy workflows"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Not intended for casual daily use"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Penetration testing"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Security labs"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "8 GB",
+                "storage": "60 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "4 GB",
+                "storage": "30 GB"
+            }
+        },
+        "package_manager_explained": "APT (Advanced Package Tool) uses curated .deb packages inherited from Debian/Ubuntu with dependable dependency resolution.",
+        "target_users": [
+            "Desktop users",
+            "Security researchers"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Parrot%2BOS+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Parrot%2BOS+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 3,
+            "power_user_score": 8,
+            "stability_score": 8
+        },
+        "download_url": "https://www.parrotsec.org/download/",
+        "badges": [
+            "Secure",
+            "Great for developers"
+        ],
+        "family": "Debian-based"
+    },
+    {
+        "id": "nixos",
+        "name": "NixOS",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Nix-snowflake.svg",
+        "website": "https://nixos.org",
+        "origin": "Global",
+        "first_release": "2003",
+        "status": "Active",
+        "description": "NixOS uses the declarative Nix package manager for reproducible system builds.",
+        "desktop": "Plasma / GNOME / sway",
+        "package_manager": "Nix",
+        "category": "Advanced / Declarative",
+        "architecture": [
+            "x86_64",
+            "ARM"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Rolling access to the latest packages",
+            "Declarative configuration and rollbacks"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Steeper learning curve for newcomers",
+            "Learning curve around the Nix language"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Custom workstation builds"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Tinkerers and builders"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "4 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "Nix is the distro's native package manager, providing access to its official repositories.",
+        "target_users": [
+            "Desktop users",
+            "Power users",
+            "DevOps engineers"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=NixOS+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=NixOS+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 4,
+            "power_user_score": 9,
+            "stability_score": 8
+        },
+        "download_url": "https://nixos.org/download.html",
+        "badges": [
+            "Great for developers",
+            "Secure",
+            "Fast performance"
+        ],
+        "family": "NixOS"
+    },
+    {
+        "id": "clearlinux",
+        "name": "Clear Linux",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Clear_Linux_Project_logo.svg",
+        "website": "https://clearlinux.org",
+        "origin": "USA",
+        "first_release": "2015",
+        "status": "Active",
+        "description": "Clear Linux is optimized by Intel for performance on modern CPUs and cloud workloads.",
+        "desktop": "GNOME",
+        "package_manager": "swupd",
+        "category": "Performance / Cloud",
+        "architecture": [
+            "x86_64"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Optimized for Intel hardware performance"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Smaller community than mainstream distros"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "8 cores",
+                "ram": "8 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "4 cores (64-bit)",
+                "ram": "4 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "swupd is Clear Linux's stateless updater delivering bundle-based atomic updates tuned for Intel hardware.",
+        "target_users": [
+            "Desktop users",
+            "Performance enthusiasts"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Clear%2BLinux+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Clear%2BLinux+Apps"
+        ],
+        "benchmarks": {
+            "resource_usage": "Medium",
+            "stability_score": 8,
+            "power_user_score": 7,
+            "boot_time": "Medium",
+            "beginner_score": 6
+        },
+        "download_url": "https://clearlinux.org/downloads",
+        "badges": [
+            "Fast performance",
+            "Secure",
+            "Lightweight"
+        ],
+        "family": "Clear Linux"
+    },
+    {
+        "id": "centos",
+        "name": "CentOS Stream",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/4/40/CentOS-Logo-2014.svg",
+        "website": "https://www.centos.org",
+        "origin": "USA",
+        "first_release": "2004",
+        "status": "Active",
+        "description": "CentOS Stream tracks just ahead of RHEL, providing a rolling preview for enterprise deployments.",
+        "desktop": "GNOME",
+        "package_manager": "DNF",
+        "category": "Enterprise / Server",
+        "architecture": [
+            "x86_64",
+            "ARM"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Enterprise-grade stability"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Requires admin experience to tune"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Infrastructure / DevOps"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Servers"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores / Xeon class",
+                "ram": "8 GB",
+                "storage": "80 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "DNF is Fedora and RHEL's modern RPM manager with modular repos, delta RPMs, and strong dependency solving.",
+        "target_users": [
+            "Desktop users",
+            "Sysadmins"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=CentOS%2BStream+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=CentOS%2BStream+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 5,
+            "power_user_score": 8,
+            "stability_score": 9
+        },
+        "download_url": "https://www.centos.org/download/",
+        "badges": [
+            "Secure",
+            "Great for developers",
+            "Fast performance"
+        ],
+        "family": "RPM"
+    },
+    {
+        "id": "almalinux",
+        "name": "AlmaLinux",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6f/AlmaLinux_logo.svg",
+        "website": "https://almalinux.org",
+        "origin": "USA",
+        "first_release": "2021",
+        "status": "Active",
+        "description": "AlmaLinux is a community-driven RHEL rebuild with long-term support guarantees.",
+        "desktop": "GNOME",
+        "package_manager": "DNF",
+        "category": "Enterprise / Server",
+        "architecture": [
+            "x86_64",
+            "ARM"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Enterprise-grade stability"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Requires admin experience to tune"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Infrastructure / DevOps"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Servers"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores / Xeon class",
+                "ram": "8 GB",
+                "storage": "80 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "DNF is Fedora and RHEL's modern RPM manager with modular repos, delta RPMs, and strong dependency solving.",
+        "target_users": [
+            "Desktop users",
+            "Sysadmins"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=AlmaLinux+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=AlmaLinux+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 5,
+            "power_user_score": 8,
+            "stability_score": 9
+        },
+        "download_url": "https://almalinux.org/get-almalinux/",
+        "badges": [
+            "Secure",
+            "Great for developers",
+            "Fast performance"
+        ],
+        "family": "RPM"
+    },
+    {
+        "id": "rocky",
+        "name": "Rocky Linux",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Rocky_Linux_logo.svg",
+        "website": "https://rockylinux.org",
+        "origin": "USA",
+        "first_release": "2021",
+        "status": "Active",
+        "description": "Rocky Linux is another RHEL-compatible rebuild focused on enterprise stability.",
+        "desktop": "GNOME",
+        "package_manager": "DNF",
+        "category": "Enterprise / Server",
+        "architecture": [
+            "x86_64",
+            "ARM"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Enterprise-grade stability"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Requires admin experience to tune"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Infrastructure / DevOps"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Servers"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores / Xeon class",
+                "ram": "8 GB",
+                "storage": "80 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "DNF is Fedora and RHEL's modern RPM manager with modular repos, delta RPMs, and strong dependency solving.",
+        "target_users": [
+            "Desktop users",
+            "Sysadmins"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Rocky%2BLinux+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Rocky%2BLinux+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 5,
+            "power_user_score": 8,
+            "stability_score": 9
+        },
+        "download_url": "https://rockylinux.org/download",
+        "badges": [
+            "Secure",
+            "Great for developers",
+            "Fast performance"
+        ],
+        "family": "RPM"
+    },
+    {
+        "id": "endeavouros",
+        "name": "EndeavourOS",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/6/66/EndeavourOS-logo.png",
+        "website": "https://endeavouros.com",
+        "origin": "Netherlands",
+        "first_release": "2019",
+        "status": "Active",
+        "description": "EndeavourOS offers an Arch-based installer with slick defaults and a friendly community.",
+        "desktop": "XFCE (installer) / multiple",
+        "package_manager": "Pacman",
+        "category": "Advanced / Community",
+        "architecture": [
+            "x86_64"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Rolling access to the latest packages",
+            "Guided Arch installer with friendly defaults"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Steeper learning curve for newcomers"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Custom workstation builds"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Tinkerers and builders"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "4 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "Pacman manages simple .pkg.tar packages with lightning-fast sync and full access to the Arch repositories/AUR.",
+        "target_users": [
+            "Desktop users",
+            "Power users"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=EndeavourOS+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=EndeavourOS+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 5,
+            "power_user_score": 9,
+            "stability_score": 8
+        },
+        "download_url": "https://endeavouros.com/latest-release/",
+        "badges": [
+            "Great for developers",
+            "Fast performance",
+            "Lightweight"
+        ],
+        "family": "Arch-based"
+    },
+    {
+        "id": "garuda",
+        "name": "Garuda Linux",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Garuda_Linux_logo.svg",
+        "website": "https://garudalinux.org",
+        "origin": "India",
+        "first_release": "2020",
+        "status": "Active",
+        "description": "Garuda Linux pairs an Arch base with Btrfs snapshots, gaming tweaks, and vivid aesthetics.",
+        "desktop": "KDE / GNOME / i3",
+        "package_manager": "Pacman",
+        "category": "Advanced / Gaming",
+        "architecture": [
+            "x86_64"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Rolling access to the latest packages",
+            "Btrfs snapshots and gaming tweaks"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Steeper learning curve for newcomers",
+            "Highly customized themes may not suit minimalists"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Custom workstation builds"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Tinkerers and builders"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "4 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "Pacman manages simple .pkg.tar packages with lightning-fast sync and full access to the Arch repositories/AUR.",
+        "target_users": [
+            "Desktop users",
+            "Power users"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Garuda%2BLinux+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Garuda%2BLinux+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 5,
+            "power_user_score": 9,
+            "stability_score": 8
+        },
+        "download_url": "https://garudalinux.org/downloads.html",
+        "badges": [
+            "Great for developers",
+            "Good for gaming",
+            "Fast performance"
+        ],
+        "family": "Arch-based"
+    },
+    {
+        "id": "void",
+        "name": "Void Linux",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Void_Linux_logo.svg",
+        "website": "https://voidlinux.org",
+        "origin": "Spain",
+        "first_release": "2008",
+        "status": "Active",
+        "description": "Void Linux is an independent distribution using the runit init system and XBPS packages.",
+        "desktop": "Multiple",
+        "package_manager": "XBPS",
+        "category": "Advanced",
+        "architecture": [
+            "x86_64",
+            "ARM"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Rolling access to the latest packages",
+            "runit init for speedy boot"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Steeper learning curve for newcomers",
+            "Smaller repositories compared to mainstream distros"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Custom workstation builds"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Tinkerers and builders"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "16 GB"
+            },
+            "minimum": {
+                "cpu": "1 core",
+                "ram": "512 MB",
+                "storage": "5 GB"
+            }
+        },
+        "package_manager_explained": "XBPS (X Binary Package System) uses fast binary transactions plus optional source builds through xbps-src.",
+        "target_users": [
+            "Desktop users",
+            "Power users"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Void%2BLinux+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Void%2BLinux+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Fast",
+            "resource_usage": "Low",
+            "beginner_score": 4,
+            "power_user_score": 8,
+            "stability_score": 8
+        },
+        "download_url": "https://voidlinux.org/download/",
+        "badges": [
+            "Lightweight",
+            "Fast performance",
+            "Secure"
+        ],
+        "family": "Void"
+    },
+    {
+        "id": "solus",
+        "name": "Solus",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Solus_logo.svg",
+        "website": "https://getsol.us",
+        "origin": "Ireland",
+        "first_release": "2015",
+        "status": "Active",
+        "description": "Solus delivers a curated desktop experience with the Budgie environment and rolling updates.",
+        "desktop": "Budgie / GNOME / KDE / MATE",
+        "package_manager": "eopkg",
+        "category": "Beginner-friendly",
+        "architecture": [
+            "x86_64"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Friendly installer and sensible defaults",
+            "Budgie desktop designed in-house"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Limited deep customization out of the box"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Home productivity"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "New Linux switchers"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "4 GB",
+                "storage": "40 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "eopkg is Solus' fork of PiSi providing curated rolling updates with dependency safety.",
+        "target_users": [
+            "Desktop users",
+            "Beginners"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Solus+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Solus+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 9,
+            "power_user_score": 7,
+            "stability_score": 8
+        },
+        "download_url": "https://getsol.us/download/",
+        "badges": [
+            "Beginner-friendly",
+            "Fast performance",
+            "Lightweight"
+        ],
+        "family": "Solus"
+    },
+    {
+        "id": "deepin",
+        "name": "deepin",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/4/45/Deepin_logo.svg",
+        "website": "https://www.deepin.org",
+        "origin": "China",
+        "first_release": "2004",
+        "status": "Active",
+        "description": "deepin ships the visually polished Deepin Desktop Environment with its own app ecosystem.",
+        "desktop": "Deepin Desktop Environment",
+        "package_manager": "APT",
+        "category": "Beginner-friendly",
+        "architecture": [
+            "x86_64"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Friendly installer and sensible defaults",
+            "Polished Deepin Desktop Environment"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Limited deep customization out of the box",
+            "Heavier resource usage"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Home productivity"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "New Linux switchers"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "8 GB",
+                "storage": "64 GB"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "4 GB",
+                "storage": "20 GB"
+            }
+        },
+        "package_manager_explained": "APT (Advanced Package Tool) uses curated .deb packages inherited from Debian/Ubuntu with dependable dependency resolution.",
+        "target_users": [
+            "Desktop users",
+            "Beginners"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=deepin+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=deepin+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "High",
+            "beginner_score": 8,
+            "power_user_score": 7,
+            "stability_score": 8
+        },
+        "download_url": "https://www.deepin.org/en/download/",
+        "badges": [
+            "Beginner-friendly",
+            "Secure",
+            "Good for gaming"
+        ],
+        "family": "Debian-based"
+    },
+    {
+        "id": "peppermint",
+        "name": "Peppermint OS",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Peppermint_OS_logo.svg",
+        "website": "https://peppermintos.com",
+        "origin": "USA",
+        "first_release": "2010",
+        "status": "Active",
+        "description": "Peppermint OS blends lightweight desktops with web app integration for reviving older hardware.",
+        "desktop": "XFCE",
+        "package_manager": "APT",
+        "category": "Beginner-friendly",
+        "architecture": [
+            "x86_64"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Friendly installer and sensible defaults",
+            "Hybrid desktop/web app workflow"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Limited deep customization out of the box"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Home productivity"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "New Linux switchers"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "2 cores",
+                "ram": "2 GB",
+                "storage": "16 GB"
+            },
+            "minimum": {
+                "cpu": "1 core",
+                "ram": "512 MB",
+                "storage": "5 GB"
+            }
+        },
+        "package_manager_explained": "APT (Advanced Package Tool) uses curated .deb packages inherited from Debian/Ubuntu with dependable dependency resolution.",
+        "target_users": [
+            "Desktop users",
+            "Beginners",
+            "Refurbished hardware teams"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Peppermint%2BOS+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Peppermint%2BOS+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Medium",
+            "resource_usage": "Medium",
+            "beginner_score": 9,
+            "power_user_score": 7,
+            "stability_score": 8
+        },
+        "download_url": "https://peppermintos.com/download/",
+        "badges": [
+            "Beginner-friendly",
+            "Lightweight",
+            "Fast performance"
+        ],
+        "family": "Ubuntu-based"
+    },
+    {
+        "id": "qubes",
+        "name": "Qubes OS",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Qubes_os_logo.svg",
+        "website": "https://www.qubes-os.org",
+        "origin": "Global",
+        "first_release": "2010",
+        "status": "Active",
+        "description": "Qubes OS isolates applications inside Xen-based virtual machines for strong compartmentalization.",
+        "desktop": "XFCE / KDE",
+        "package_manager": "DNF / APT",
+        "category": "Security / Isolation",
+        "architecture": [
+            "x86_64"
+        ],
+        "pros": [
+            "Active community support",
+            "Large software repositories",
+            "Ships with security tooling ready to go",
+            "Compartmentalization via Xen domains"
+        ],
+        "cons": [
+            "Requires periodic maintenance and updates",
+            "Not intended for casual daily use",
+            "High hardware requirements"
+        ],
+        "compatibility": {
+            "not_ideal_for": [
+                "Legacy 32-bit hardware"
+            ],
+            "use_cases": [
+                "General desktop",
+                "Development",
+                "Penetration testing"
+            ],
+            "best_for": [
+                "Desktops",
+                "Laptops",
+                "Security labs"
+            ]
+        },
+        "hardware_requirements": {
+            "recommended": {
+                "cpu": "4 cores",
+                "ram": "8 GB",
+                "storage": "60 GB SSD"
+            },
+            "minimum": {
+                "cpu": "2 cores",
+                "ram": "4 GB",
+                "storage": "30 GB"
+            }
+        },
+        "package_manager_explained": "DNF / APT is the distro's native package manager, providing access to its official repositories.",
+        "target_users": [
+            "Desktop users",
+            "Security researchers",
+            "Security-critical operators"
+        ],
+        "screenshots": [
+            "https://dummyimage.com/800x450/13142a/33ff57&text=Qubes%2BOS+Desktop",
+            "https://dummyimage.com/800x450/0b0c18/f0f6ff&text=Qubes%2BOS+Apps"
+        ],
+        "benchmarks": {
+            "boot_time": "Slow",
+            "resource_usage": "High",
+            "beginner_score": 3,
+            "power_user_score": 8,
+            "stability_score": 8
+        },
+        "download_url": "https://www.qubes-os.org/downloads/",
+        "badges": [
+            "Secure",
+            "Great for developers",
+            "Fast performance"
+        ],
+        "family": "Fedora-based"
+    }
+]

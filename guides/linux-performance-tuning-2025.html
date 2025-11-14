@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linux Performance Tuning Guide (2025) | bestlinuxdistros.com</title>
+  <meta name="description" content="Tune Linux performance in 2025 with sysctl tweaks, swappiness, journald rate limiting, and filesystem optimizations. References Clear Linux, Arch, and other performance-friendly distros." />
+  <meta name="keywords" content="linux performance tuning 2025, sysctl tuning, swappiness, journald rate limit, btrfs tuning, clear linux performance" />
+  <meta property="og:title" content="Linux Performance Tuning Guide (2025)" />
+  <meta property="og:description" content="Apply sysctl, filesystem, and logging tweaks that squeeze every drop from Clear Linux, Arch, and other performance-focused distributions." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://bestlinuxdistros.com/guides/linux-performance-tuning-2025.html" />
+  <meta property="og:image" content="https://bestlinuxdistros.com/assets/og-card.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://bestlinuxdistros.com/guides/linux-performance-tuning-2025.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="page guide-article">
+  <header class="site-header floating">
+    <div class="logo-mark"><a href="../index.html">bestlinuxdistros<span class="dot">.com</span></a></div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../distros.html">Distros</a>
+      <a href="../compare.html">Compare</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="index.html">Guides</a>
+      <a href="../tools/index.html">Tools</a>
+      <a href="../distros.html#search" data-nav-search>Search</a>
+    </nav>
+  </header>
+
+  <main class="guides-main">
+    <section class="guide-hero">
+      <p class="muted-label">Performance Lab</p>
+      <h1>Linux Performance Tuning Guide (2025)</h1>
+      <p class="lede">Use these tweaks after you install a performance-oriented distro such as <a href="../distros/clearlinux.html">Clear Linux</a>, <a href="../distros/arch.html">Arch</a>, or <a href="../distros/endeavouros.html">EndeavourOS</a>. Snapshot first and change one variable at a time.</p>
+    </section>
+
+    <article class="prose">
+      <h2 id="sysctl">1. Sysctl profile</h2>
+      <p>Create <code>/etc/sysctl.d/95-performance.conf</code> with workstation-friendly defaults:</p>
+      <pre><code>vm.swappiness=20
+vm.dirty_ratio=10
+vm.dirty_background_ratio=5
+kernel.sched_min_granularity_ns=10000000
+kernel.sched_wakeup_granularity_ns=15000000
+net.core.default_qdisc=fq
+net.ipv4.tcp_congestion_control=bbr</code></pre>
+      <p>BBR plus the <code>fq</code> qdisc dramatically improve latency on fiber and Wi-Fi 6 networks. Apply with <code>sudo sysctl --system</code> and document the change inside your homelab notes.</p>
+
+      <h2 id="memory">2. Swappiness &amp; zram</h2>
+      <p>Keep real RAM hot by lowering swappiness and enabling compressed swap:</p>
+      <pre><code>sudo systemctl enable --now systemd-zram-setup@zram0.service</code></pre>
+      <p>Rolling distros such as <a href="../distros/arch.html">Arch</a> and <a href="../distros/endeavouros.html">EndeavourOS</a> expose <code>zram-generator</code>. Configure <code>zram-size = ram / 2</code> on laptops and set <code>vm.swappiness=15</code> for workstation desktops.</p>
+
+      <h2 id="journald">3. Journald rate limiting</h2>
+      <p>Chattier services can stall writes. Tune <code>/etc/systemd/journald.conf</code>:</p>
+      <pre><code>[Journal]
+SystemMaxUse=750M
+RateLimitIntervalSec=20s
+RateLimitBurst=400</code></pre>
+      <p>Restart journald, then forward critical logs with <code>systemd-journal-upload</code> or ship to Loki/Elastic. This mirrors the logging setup we recommend on the <a href="/tools/kernel-update-guide.html">Kernel Update Guide</a>.</p>
+
+      <h2 id="filesystem">4. Filesystem-specific wins</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Filesystem</th>
+            <th>Tweak</th>
+            <th>Recommended For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>EXT4</td>
+            <td><code>sudo tune2fs -o journal_data_writeback /dev/&lt;root&gt;</code></td>
+            <td>Desktop installs that still want classic journaling. Pair with weekly <code>fstrim</code>.</td>
+          </tr>
+          <tr>
+            <td>Btrfs</td>
+            <td>Mount with <code>compress=zstd,ssd,space_cache=v2</code></td>
+            <td>Snapshot-heavy distros like <a href="../distros/garuda.html">Garuda</a> or <a href="../distros/endeavouros.html">EndeavourOS</a>.</td>
+          </tr>
+          <tr>
+            <td>XFS</td>
+            <td>Increase log buffer via <code>logbsize=256k</code></td>
+            <td>Servers running <a href="../distros/rhel.html">RHEL</a> or <a href="../distros/almalinux.html">AlmaLinux</a> handling big sequential writes.</td>
+          </tr>
+          <tr>
+            <td>ZFS</td>
+            <td>Set <code>recordsize=1M</code> for media workloads</td>
+            <td>Workstations experimenting with <a href="../distros/popos.html">Pop!_OS</a> ZFS or <a href="../distros/clearlinux.html">Clear Linux</a> storage pools.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="services">5. Trim background services</h2>
+      <p>Run <code>systemctl --type=service --state=running</code> to find daemons you can disable. Examples: printing on travel laptops, media indexers on render nodes, or tracker miners if you already index with Syncthing. Remove unused stacks cleanly with help from the <a href="/tools/package-manager-cheatsheet.html">Package Manager Cheatsheet</a>.</p>
+
+      <h2 id="benchmarks">6. Benchmark and iterate</h2>
+      <ul>
+        <li><code>systemd-analyze blame</code> highlights services slowing boot.</li>
+        <li><code>fio --name=randread --rw=randread</code> captures storage deltas.</li>
+        <li><code>perf stat make -j$(nproc)</code> surfaces CPU scheduling impact.</li>
+      </ul>
+      <p>Record the kernel build and distro version (e.g., <a href="../distros/clearlinux.html">Clear Linux</a> build number) with every change. Timeshift or Btrfs snapshots let you roll back when a tune-up backfires.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p>Made by Saif &middot;  </p>
+      <p class="last-updated" data-last-updated="November 14, 2025">Last updated November 14, 2025</p>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html#about">About</a>
+      <a href="mailto:hello@bestlinuxdistros.com">Contact</a>
+      <a href="../index.html#privacy">Privacy</a>
+      <a href="../sitemap.xml">Sitemap</a>
+      <a href="https://github.com/bestlinuxdistros" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="footer-note">&copy; 2025 BestLinuxDistros.com &mdash; Open-Source Project. Made for Linux users, by Linux users.</p>
+  </footer>
+  <script src="../js/distro-data.js" defer></script>
+  <script src="../js/app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Linux Performance Tuning Guide (2025)",
+    "description": "Sysctl, swappiness, journald, and filesystem tuning tips for Clear Linux, Arch, EndeavourOS, and other performance-focused distributions.",
+    "datePublished": "2025-11-14",
+    "dateModified": "2025-11-14",
+    "author": { "@type": "Organization", "name": "bestlinuxdistros.com" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "bestlinuxdistros.com",
+      "logo": { "@type": "ImageObject", "url": "https://bestlinuxdistros.com/assets/og-card.png" }
+    },
+    "image": "https://bestlinuxdistros.com/assets/og-card.png",
+    "url": "https://bestlinuxdistros.com/guides/linux-performance-tuning-2025.html"
+  }
+  </script>
+</body>
+</html>

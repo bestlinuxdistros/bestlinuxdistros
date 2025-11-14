@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linux Distro Catalog | BESTLINUXDISTROS</title>
+  <meta name="description" content="Search and filter curated Linux distributions by skill level, release model, hardware needs, and more with a neon terminal experience." />
+  <meta name="keywords" content="Linux distro catalog, Linux filters, distro finder, desktop Linux, server Linux, security distros" />
+  <meta property="og:title" content="Linux Distro Catalog | BESTLINUXDISTROS" />
+  <meta property="og:description" content="Filter curated Linux distros by category, release cadence, and hardware needs before you compare." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bestlinuxdistros.com/distros.html" />
+  <meta property="og:image" content="https://bestlinuxdistros.com/assets/og-card.png" />
+  <link rel="canonical" href="https://bestlinuxdistros.com/distros.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page catalog">
+  <header class="site-header floating">
+    <div class="logo-mark"><a href="index.html">bestlinuxdistros<span class="dot">.com</span></a></div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="site-nav">
+      <a href="index.html">Home</a>
+      <a href="distros.html">Distros</a>
+      <a href="compare.html">Compare</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="guides/index.html">Guides</a>
+      <a href="tools/index.html">Tools</a>
+      <a href="#search" data-nav-search>Search</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero terminal catalog-hero">
+      <div class="terminal-chrome">
+        <span class="dot-red"></span>
+        <span class="dot-yellow"></span>
+        <span class="dot-green"></span>
+      </div>
+      <p class="muted-label">catalog@bestlinuxdistros:~$</p>
+      <h1>Explore the curated Linux catalog</h1>
+      <p class="lede">Search, filter, and sort 30+ distros by release cadence, hardware requirements, and audience. Every card reflects the same vetted dataset that powers our detail pages.</p>
+    </section>
+
+    <p class="catalog-intro">Use the search bar, category dropdown, and sorting controls to zero in on distros that fit your workflow. Filters respond instantly without page reloads.</p>
+
+    <div id="offlineBanner" class="offline-banner" aria-hidden="true">
+      Offline snapshot in use. Connect a local server or deploy the API to refresh live data.
+    </div>
+
+    <section class="controls-grid" aria-label="Filters">
+      <label class="visually-hidden" for="searchInput">Search distros</label>
+      <input type="search" id="searchInput" class="search-input" placeholder="Search by name, package manager, or tag" autocomplete="off" />
+
+      <label class="visually-hidden" for="categoryFilter">Filter by category</label>
+      <select id="categoryFilter" class="select-control">
+        <option value="all">All categories</option>
+        <option value="beginner">Beginner</option>
+        <option value="server">Server</option>
+        <option value="security">Security</option>
+        <option value="rolling">Rolling</option>
+        <option value="lts">LTS</option>
+      </select>
+
+      <label class="visually-hidden" for="sortControl">Sort distros</label>
+      <select id="sortControl" class="select-control">
+        <option value="popularity">Sort by popularity</option>
+        <option value="name">Name A-Z</option>
+        <option value="beginner">Beginner friendly</option>
+        <option value="resource">Resource usage</option>
+      </select>
+
+      <button class="ghost-btn" id="resetFilters" type="button">Clear filters</button>
+    </section>
+
+    <section class="distro-grid" id="skeletonGrid" aria-hidden="false">
+      <article class="skeleton-card"></article>
+      <article class="skeleton-card"></article>
+      <article class="skeleton-card"></article>
+      <article class="skeleton-card"></article>
+      <article class="skeleton-card"></article>
+      <article class="skeleton-card"></article>
+    </section>
+
+    <section class="distro-grid" id="distroGrid" aria-live="polite"></section>
+  </main>
+
+  <div class="compare-tray" id="compareTray" data-open="false" aria-live="polite">
+    <span id="compareCount">0/4 selected</span>
+    <button id="launchCompare" type="button">Compare</button>
+    <button class="reset" id="resetCompare" type="button">Clear</button>
+  </div>
+
+    <footer class="site-footer">
+    <div>
+      <p>Made by Saif &middot;  </p>
+      <p class="last-updated" data-last-updated="November 14, 2025">Last updated November 14, 2025</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html#about">About</a>
+      <a href="mailto:hello@bestlinuxdistros.com">Contact</a>
+      <a href="index.html#privacy">Privacy</a>
+      <a href="sitemap.xml">Sitemap</a>
+      <a href="https://github.com/bestlinuxdistros" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="footer-note">&copy; 2025 BestLinuxDistros.com &mdash; Open-Source Project. Made for Linux users, by Linux users.</p>
+  </footer>
+  <script src="js/distro-data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

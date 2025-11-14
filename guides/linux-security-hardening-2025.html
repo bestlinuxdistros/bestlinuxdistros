@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linux Security Hardening Guide (2025) | bestlinuxdistros.com</title>
+  <meta name="description" content="Practical Linux security hardening for 2025 covering firewalls, kernel settings, permissions, and mandatory access controls with references to Kali, Parrot, and Qubes." />
+  <meta name="keywords" content="linux security hardening, linux firewall basics, selinux tutorial, apparmor guide, kali security checklist" />
+  <meta property="og:title" content="Linux Security Hardening Guide (2025)" />
+  <meta property="og:description" content="Lock down your workstations and labs with firewall basics, kernel hardening, SELinux/AppArmor, and distro recommendations from the security tier of our catalog." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://bestlinuxdistros.com/guides/linux-security-hardening-2025.html" />
+  <meta property="og:image" content="https://bestlinuxdistros.com/assets/og-card.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://bestlinuxdistros.com/guides/linux-security-hardening-2025.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="page guide-article">
+  <header class="site-header floating">
+    <div class="logo-mark"><a href="../index.html">bestlinuxdistros<span class="dot">.com</span></a></div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../distros.html">Distros</a>
+      <a href="../compare.html">Compare</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="index.html">Guides</a>
+      <a href="../tools/index.html">Tools</a>
+      <a href="../distros.html#search" data-nav-search>Search</a>
+    </nav>
+  </header>
+
+  <main class="guides-main">
+    <section class="guide-hero">
+      <p class="muted-label">Security &amp; Compliance</p>
+      <h1>Linux Security Hardening Guide (2025)</h1>
+      <p class="lede">This playbook distills how we lock down lab machines that run <a href="../distros/kali.html">Kali</a>, <a href="../distros/parrot.html">Parrot</a>, and <a href="../distros/qubes.html">Qubes OS</a>. Adapt it to any distro in the security category of our catalog.</p>
+    </section>
+
+    <article class="prose">
+      <h2 id="firewall">1. Start with a sane firewall baseline</h2>
+      <p>Most distros ship either <code>ufw</code> or <code>firewalld</code>. Pick one and enforce default deny:</p>
+      <pre><code>sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow OpenSSH
+sudo ufw enable</code></pre>
+      <p>On Fedora-based systems (including <a href="../distros/qubes.html">Qubes</a> templates) use <code>firewall-cmd</code> services and zones. For penetration-testing rigs like <a href="../distros/kali.html">Kali Linux</a>, create profiles so scanners run inside isolated namespaces rather than on the workstation host network.</p>
+
+      <h2 id="kernel">2. Harden the kernel</h2>
+      <p>Apply sysctl toggles that reduce exploit surface:</p>
+      <pre><code>kernel.kptr_restrict=2
+kernel.dmesg_restrict=1
+kernel.yama.ptrace_scope=2
+net.ipv4.conf.all.accept_redirects=0
+net.ipv4.conf.all.accept_source_route=0
+fs.protected_symlinks=1</code></pre>
+      <p>Drop them inside <code>/etc/sysctl.d/99-hardening.conf</code> and run <code>sudo sysctl --system</code>. Distros such as <a href="../distros/parrot.html">Parrot Security</a> already set many of these values, but auditing ensures upgrades don&rsquo;t revert the policy.</p>
+
+      <h2 id="permissions">3. Tighten permissions</h2>
+      <ul>
+        <li>Ensure only root writes to <code>/boot</code>.</li>
+        <li>Set the sticky bit on shared directories: <code>sudo chmod 1777 /tmp /var/tmp</code>.</li>
+        <li>Use <code>find / -perm -4000 -type f</code> to inventory SUID binaries and document why they exist.</li>
+        <li>Adopt role-based sudoers files so pentest tooling is separated from daily-driver accounts.</li>
+      </ul>
+      <p>We mirror this workflow inside our <a href="../distros.html">catalog</a> when evaluating whether a distro belongs in the Security tag set.</p>
+
+      <h2 id="mac">4. Embrace SELinux and AppArmor</h2>
+      <p><a href="../distros/qubes.html">Qubes OS</a> uses Xen isolation, but even mainstream distros gain guardrails with MAC frameworks:</p>
+      <ul>
+        <li><strong>SELinux (Fedora, RHEL derivatives):</strong> Set to <code>enforcing</code>, install <code>setroubleshoot</code>, and tailor boolean toggles instead of disabling the policy.</li>
+        <li><strong>AppArmor (Ubuntu, Debian-based):</strong> Enable profiles for browsers and containers, then review with <code>aa-status</code>.</li>
+      </ul>
+      <p>If you build golden images, store custom profiles in Git and reapply them with Ansible so laptops stay in sync.</p>
+
+      <h2 id="monitor">5. Monitor and log intelligently</h2>
+      <p>Centralized logging matters even for single engineers. Forward journald to text files with rate limiting:</p>
+      <pre><code>[Journal]
+RateLimitIntervalSec=30s
+RateLimitBurst=500</code></pre>
+      <p>Ship the logs with <code>systemd-journal-upload</code> or <code>vector</code>. Pair that with file integrity monitoring via <code>auditd</code> or <code>osquery</code>.</p>
+
+      <h2 id="distros">6. Pick the right distro for the job</h2>
+      <p>Match your workflow to the distro profile:</p>
+      <ul>
+        <li><strong><a href="../distros/kali.html">Kali Linux</a>:</strong> Offensive tooling with rolling releases. Use snapshots or <a href="/tools/kernel-update-guide.html">kernel update guardrails</a> before major upgrades.</li>
+        <li><strong><a href="../distros/parrot.html">Parrot Security OS</a>:</strong> Includes sandboxed applications and a lighter footprint for laptops.</li>
+        <li><strong><a href="../distros/qubes.html">Qubes OS</a>:</strong> Xen-based compartmentalization when you need to isolate identities or customers.</li>
+      </ul>
+      <p>Cross-reference their hardware requirements on each detail page&rsquo;s <em>Hardware</em> section or inside the <a href="/tools/hardware-compatibility-checker.html">compatibility tool</a>.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p>Made by Saif &middot;  </p>
+      <p class="last-updated" data-last-updated="November 14, 2025">Last updated November 14, 2025</p>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html#about">About</a>
+      <a href="mailto:hello@bestlinuxdistros.com">Contact</a>
+      <a href="../index.html#privacy">Privacy</a>
+      <a href="../sitemap.xml">Sitemap</a>
+      <a href="https://github.com/bestlinuxdistros" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="footer-note">&copy; 2025 BestLinuxDistros.com &mdash; Open-Source Project. Made for Linux users, by Linux users.</p>
+  </footer>
+  <script src="../js/distro-data.js" defer></script>
+  <script src="../js/app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Linux Security Hardening Guide (2025)",
+    "description": "Firewall baselines, kernel hardening, permissions, and SELinux/AppArmor tips mapped to Kali, Parrot, and Qubes OS.",
+    "datePublished": "2025-11-14",
+    "dateModified": "2025-11-14",
+    "author": { "@type": "Organization", "name": "bestlinuxdistros.com" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "bestlinuxdistros.com",
+      "logo": { "@type": "ImageObject", "url": "https://bestlinuxdistros.com/assets/og-card.png" }
+    },
+    "image": "https://bestlinuxdistros.com/assets/og-card.png",
+    "url": "https://bestlinuxdistros.com/guides/linux-security-hardening-2025.html"
+  }
+  </script>
+</body>
+</html>

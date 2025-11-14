@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linux Hardware Compatibility Checker | bestlinuxdistros.com</title>
+  <meta name="description" content="Manual worksheet for checking whether your hardware meets popular Linux distro requirements. Compare CPU, RAM, and storage targets pulled from the bestlinuxdistros.com catalog." />
+  <meta name="keywords" content="linux hardware requirements, check linux compatibility, ubuntu hardware requirements, distro hardware checker" />
+  <meta property="og:title" content="Linux Hardware Compatibility Checker" />
+  <meta property="og:description" content="Compare your CPU, RAM, and storage specs against Linux distro requirements and plan upgrades before installing." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://bestlinuxdistros.com/tools/hardware-compatibility-checker.html" />
+  <meta property="og:image" content="https://bestlinuxdistros.com/assets/og-card.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://bestlinuxdistros.com/tools/hardware-compatibility-checker.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="page tool-article">
+  <header class="site-header floating">
+    <div class="logo-mark"><a href="../index.html">bestlinuxdistros<span class="dot">.com</span></a></div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../distros.html">Distros</a>
+      <a href="../compare.html">Compare</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../guides/index.html">Guides</a>
+      <a href="index.html">Tools</a>
+      <a href="../distros.html#search" data-nav-search>Search</a>
+    </nav>
+  </header>
+
+  <main class="tools-main">
+    <section class="tool-hero">
+      <p class="muted-label">Hardware Planning</p>
+      <h1>Linux Hardware Compatibility Checker</h1>
+      <p class="lede">Use this worksheet to compare your laptop or server specs against the requirements published on each <a href="../distros.html">distro detail page</a>. It keeps you honest before you flash an ISO.</p>
+    </section>
+
+    <article class="prose">
+      <h2>1. Capture your current hardware</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Your Spec</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CPU</td>
+            <td>e.g., Intel i5-8250U (4C/8T)</td>
+            <td>Record generation and whether virtualization is enabled.</td>
+          </tr>
+          <tr>
+            <td>RAM</td>
+            <td>8&nbsp;GB DDR4</td>
+            <td>Check if slots are upgradeable.</td>
+          </tr>
+          <tr>
+            <td>Storage</td>
+            <td>512&nbsp;GB NVMe (unused 220&nbsp;GB)</td>
+            <td>Note free space for dual-boot.</td>
+          </tr>
+          <tr>
+            <td>GPU</td>
+            <td>Nvidia MX150</td>
+            <td>Flag hybrid graphics for distros like <a href="../distros/popos.html">Pop!_OS</a>.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>2. Compare against distro requirements</h2>
+      <p>The easiest way is to open the distro detail page and scroll to <strong>Hardware requirements</strong>. Start with these averages:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Distro</th>
+            <th>Minimum</th>
+            <th>Recommended</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="../distros/ubuntu.html">Ubuntu</a></td>
+            <td>2 cores / 2&nbsp;GB RAM / 20&nbsp;GB disk</td>
+            <td>4 cores / 4&nbsp;GB RAM / 40&nbsp;GB SSD</td>
+          </tr>
+          <tr>
+            <td><a href="../distros/mint.html">Linux Mint</a></td>
+            <td>2&nbsp;GB RAM / 20&nbsp;GB disk</td>
+            <td>4&nbsp;GB RAM / 100&nbsp;GB disk for comfort</td>
+          </tr>
+          <tr>
+            <td><a href="../distros/kali.html">Kali</a></td>
+            <td>2 cores / 2&nbsp;GB RAM</td>
+            <td>4 cores / 8&nbsp;GB RAM when running VMs</td>
+          </tr>
+          <tr>
+            <td><a href="../distros/clearlinux.html">Clear Linux</a></td>
+            <td>AVX2-capable CPU / 8&nbsp;GB RAM</td>
+            <td>Modern Intel CPU / 16+&nbsp;GB RAM / NVMe storage</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>3. Plan upgrades or distro swaps</h2>
+      <ul>
+        <li>If RAM is below requirements, prioritize a lightweight distro such as <a href="../distros/mxlinux.html">MX Linux</a> or <a href="../distros/peppermint.html">Peppermint</a>.</li>
+        <li>If your GPU is proprietary-only, choose distros with driver toggles (Pop!_OS, <a href="../distros/garuda.html">Garuda</a> Dragonized).</li>
+        <li>Use the <a href="/guides/how-to-choose-a-linux-distro.html">distro decision guide</a> to validate the rest of your shortlist.</li>
+      </ul>
+
+      <h2>4. Checklist before you install</h2>
+      <ol>
+        <li>BIOS/UEFI updated and Secure Boot status documented.</li>
+        <li>Backups complete (Timeshift, Veeam, or rsync).</li>
+        <li>Free space carved out for the install (at least 30&nbsp;GB recommended).</li>
+        <li>Network adapters confirmed in Linux live session.</li>
+      </ol>
+      <p>Once everything is green, boot the ISO and follow the steps in the <a href="/guides/linux-beginners-guide-2025.html">Beginner guide</a>.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p>Made by Saif &middot;  </p>
+      <p class="last-updated" data-last-updated="November 14, 2025">Last updated November 14, 2025</p>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html#about">About</a>
+      <a href="mailto:hello@bestlinuxdistros.com">Contact</a>
+      <a href="../index.html#privacy">Privacy</a>
+      <a href="../sitemap.xml">Sitemap</a>
+      <a href="https://github.com/bestlinuxdistros" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="footer-note">&copy; 2025 BestLinuxDistros.com &mdash; Open-Source Project. Made for Linux users, by Linux users.</p>
+  </footer>
+  <script src="../js/distro-data.js" defer></script>
+  <script src="../js/app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Linux Hardware Compatibility Checker",
+    "description": "A manual worksheet for comparing your hardware against Linux distro requirements.",
+    "totalTime": "PT15M",
+    "supply": ["Linux distro hardware requirement table", "System spec sheet"],
+    "tool": ["lsblk", "lscpu", "free -h"],
+    "step": [
+      {"@type": "HowToStep", "name": "Collect specs", "text": "Document CPU, RAM, storage, GPU, and firmware state."},
+      {"@type": "HowToStep", "name": "Compare with distro requirements", "text": "Use the hardware section on each bestlinuxdistros.com detail page."},
+      {"@type": "HowToStep", "name": "Plan upgrades", "text": "Prioritize RAM or storage upgrades or pick lighter distros."}
+    ],
+    "url": "https://bestlinuxdistros.com/tools/hardware-compatibility-checker.html"
+  }
+  </script>
+</body>
+</html>

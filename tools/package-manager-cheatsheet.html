@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linux Package Manager Cheatsheet | bestlinuxdistros.com</title>
+  <meta name="description" content="Side-by-side reference for APT, DNF, Pacman, and Zypper commands. Includes links to the distros that use each package manager." />
+  <meta name="keywords" content="apt vs dnf vs pacman vs zypper, linux package manager cheatsheet, package manager commands" />
+  <meta property="og:title" content="Linux Package Manager Cheatsheet" />
+  <meta property="og:description" content="Keep these APT, DNF, Pacman, and Zypper commands handy when you hop between distros." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://bestlinuxdistros.com/tools/package-manager-cheatsheet.html" />
+  <meta property="og:image" content="https://bestlinuxdistros.com/assets/og-card.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://bestlinuxdistros.com/tools/package-manager-cheatsheet.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="page tool-article">
+  <header class="site-header floating">
+    <div class="logo-mark"><a href="../index.html">bestlinuxdistros<span class="dot">.com</span></a></div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../distros.html">Distros</a>
+      <a href="../compare.html">Compare</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../guides/index.html">Guides</a>
+      <a href="index.html">Tools</a>
+      <a href="../distros.html#search" data-nav-search>Search</a>
+    </nav>
+  </header>
+
+  <main class="tools-main">
+    <section class="tool-hero">
+      <p class="muted-label">CLI Reference</p>
+      <h1>Linux Package Manager Cheatsheet</h1>
+      <p class="lede">When you hop between <a href="../distros/ubuntu.html">Ubuntu</a>, <a href="../distros/fedora.html">Fedora</a>, <a href="../distros/arch.html">Arch</a>, and <a href="../distros/opensuse.html">openSUSE</a>, muscle memory can stumble. Keep these commands open in a second monitor or note-taking app.</p>
+    </section>
+
+    <article class="prose">
+      <table>
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>APT (Ubuntu/Mint)</th>
+            <th>DNF (Fedora/RHEL)</th>
+            <th>Pacman (Arch/EndeavourOS)</th>
+            <th>Zypper (openSUSE)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Update package lists</td>
+            <td><code>sudo apt update</code></td>
+            <td><code>sudo dnf check-update</code></td>
+            <td><code>sudo pacman -Sy</code></td>
+            <td><code>sudo zypper refresh</code></td>
+          </tr>
+          <tr>
+            <td>Upgrade packages</td>
+            <td><code>sudo apt upgrade</code></td>
+            <td><code>sudo dnf upgrade</code></td>
+            <td><code>sudo pacman -Syu</code></td>
+            <td><code>sudo zypper update</code></td>
+          </tr>
+          <tr>
+            <td>Install package</td>
+            <td><code>sudo apt install &lt;pkg&gt;</code></td>
+            <td><code>sudo dnf install &lt;pkg&gt;</code></td>
+            <td><code>sudo pacman -S &lt;pkg&gt;</code></td>
+            <td><code>sudo zypper install &lt;pkg&gt;</code></td>
+          </tr>
+          <tr>
+            <td>Remove package</td>
+            <td><code>sudo apt remove &lt;pkg&gt;</code></td>
+            <td><code>sudo dnf remove &lt;pkg&gt;</code></td>
+            <td><code>sudo pacman -R &lt;pkg&gt;</code></td>
+            <td><code>sudo zypper remove &lt;pkg&gt;</code></td>
+          </tr>
+          <tr>
+            <td>Search package</td>
+            <td><code>apt search &lt;term&gt;</code></td>
+            <td><code>dnf search &lt;term&gt;</code></td>
+            <td><code>pacman -Ss &lt;term&gt;</code></td>
+            <td><code>zypper search &lt;term&gt;</code></td>
+          </tr>
+          <tr>
+            <td>Info/metadata</td>
+            <td><code>apt show &lt;pkg&gt;</code></td>
+            <td><code>dnf info &lt;pkg&gt;</code></td>
+            <td><code>pacman -Si &lt;pkg&gt;</code></td>
+            <td><code>zypper info &lt;pkg&gt;</code></td>
+          </tr>
+          <tr>
+            <td>Clean cache</td>
+            <td><code>sudo apt autoremove &amp;&amp; sudo apt clean</code></td>
+            <td><code>sudo dnf autoremove</code></td>
+            <td><code>sudo pacman -Sc</code></td>
+            <td><code>sudo zypper clean --all</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Package ecosystems at a glance</h2>
+      <ul>
+        <li><strong>APT:</strong> <a href="../distros/ubuntu.html">Ubuntu</a>, <a href="../distros/mint.html">Mint</a>, <a href="../distros/debian.html">Debian</a>, <a href="../distros/popos.html">Pop!_OS</a>.</li>
+        <li><strong>DNF:</strong> <a href="../distros/fedora.html">Fedora</a>, <a href="../distros/rhel.html">RHEL</a>, <a href="../distros/almalinux.html">AlmaLinux</a>, <a href="../distros/rocky.html">Rocky</a>.</li>
+        <li><strong>Pacman:</strong> <a href="../distros/arch.html">Arch</a>, <a href="../distros/endeavouros.html">EndeavourOS</a>, <a href="../distros/manjaro.html">Manjaro</a>, <a href="../distros/garuda.html">Garuda</a>.</li>
+        <li><strong>Zypper:</strong> <a href="../distros/opensuse.html">openSUSE</a> (Leap &amp; Tumbleweed).</li>
+      </ul>
+
+      <p>Need context on when to pick each family? Pair this cheatsheet with the <a href="/guides/how-to-choose-a-linux-distro.html">distro decision guide</a> and our <a href="/guides/linux-performance-tuning-2025.html">performance tuning tips</a>. For kernel upgrade commands, jump to the <a href="kernel-update-guide.html">Kernel Update Guide</a>.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p>Made by Saif &middot;  </p>
+      <p class="last-updated" data-last-updated="November 14, 2025">Last updated November 14, 2025</p>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html#about">About</a>
+      <a href="mailto:hello@bestlinuxdistros.com">Contact</a>
+      <a href="../index.html#privacy">Privacy</a>
+      <a href="../sitemap.xml">Sitemap</a>
+      <a href="https://github.com/bestlinuxdistros" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="footer-note">&copy; 2025 BestLinuxDistros.com &mdash; Open-Source Project. Made for Linux users, by Linux users.</p>
+  </footer>
+  <script src="../js/distro-data.js" defer></script>
+  <script src="../js/app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Linux Package Manager Cheatsheet",
+    "description": "Command reference for APT, DNF, Pacman, and Zypper with distro recommendations.",
+    "datePublished": "2025-11-14",
+    "dateModified": "2025-11-14",
+    "author": { "@type": "Organization", "name": "bestlinuxdistros.com" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "bestlinuxdistros.com",
+      "logo": { "@type": "ImageObject", "url": "https://bestlinuxdistros.com/assets/og-card.png" }
+    },
+    "image": "https://bestlinuxdistros.com/assets/og-card.png",
+    "url": "https://bestlinuxdistros.com/tools/package-manager-cheatsheet.html"
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linux Kernel Update Guide | bestlinuxdistros.com</title>
+  <meta name="description" content="Understand how Linux kernel updates work across LTS and rolling distros. Learn backup strategies, scheduling, and how to roll back safely." />
+  <meta name="keywords" content="linux kernel update guide, rolling release kernels, arch kernel upgrade, snapshot before kernel update" />
+  <meta property="og:title" content="Linux Kernel Update Guide" />
+  <meta property="og:description" content="Plan kernel updates on Arch, Manjaro, Ubuntu, Fedora, and more with backups, scheduling, and rollback steps." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://bestlinuxdistros.com/tools/kernel-update-guide.html" />
+  <meta property="og:image" content="https://bestlinuxdistros.com/assets/og-card.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://bestlinuxdistros.com/tools/kernel-update-guide.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="page tool-article">
+  <header class="site-header floating">
+    <div class="logo-mark"><a href="../index.html">bestlinuxdistros<span class="dot">.com</span></a></div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../distros.html">Distros</a>
+      <a href="../compare.html">Compare</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../guides/index.html">Guides</a>
+      <a href="index.html">Tools</a>
+      <a href="../distros.html#search" data-nav-search>Search</a>
+    </nav>
+  </header>
+
+  <main class="tools-main">
+    <section class="tool-hero">
+      <p class="muted-label">Maintenance</p>
+      <h1>Linux Kernel Update Guide</h1>
+      <p class="lede">Kernel updates keep hardware secure and performant, but every distro handles them differently. Use this reference before you upgrade <a href="../distros/arch.html">Arch</a>, <a href="../distros/manjaro.html">Manjaro</a>, <a href="../distros/ubuntu.html">Ubuntu</a>, or <a href="../distros/fedora.html">Fedora</a>.</p>
+    </section>
+
+    <article class="prose">
+      <h2>1. Know your cadence</h2>
+      <ul>
+        <li><strong>LTS distros</strong> (Ubuntu LTS, <a href="../distros/debian.html">Debian</a>): kernels land via point releases or Hardware Enablement stacks. They&rsquo;re conservative but require reboots on your schedule.</li>
+        <li><strong>Rolling distros</strong> (Arch, <a href="../distros/clearlinux.html">Clear Linux</a>): kernels arrive weekly. Expect occasional driver regressions and keep fallback entries in your bootloader.</li>
+        <li><strong>Managed rolling</strong> (Manjaro, <a href="../distros/popos.html">Pop!_OS</a>): updates are delayed slightly for extra testing.</li>
+      </ul>
+
+      <h2>2. Snapshot before touching kernels</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Snapshot Tool</th>
+            <th>Recommended Distros</th>
+            <th>Command</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Timeshift (rsync/Btrfs)</td>
+            <td>Ubuntu, Mint, Pop!_OS</td>
+            <td><code>sudo timeshift --create --comments "pre-kernel"</code></td>
+          </tr>
+          <tr>
+            <td>Snapper</td>
+            <td>openSUSE, Btrfs-based Arch spins</td>
+            <td><code>sudo snapper create -d "before kernel"</code></td>
+          </tr>
+          <tr>
+            <td>Refind/btrbk snapshots</td>
+            <td>Arch, Garuda, EndeavourOS</td>
+            <td><code>sudo btrbk run</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>3. Execute the upgrade</h2>
+      <ul>
+        <li><strong>Arch/EndeavourOS:</strong> <code>sudo pacman -Syu</code>, watch for hooks, and reboot immediately. Keep <code>linux-lts</code> installed as backup.</li>
+        <li><strong>Manjaro:</strong> Use <code>sudo pacman -Syu</code> or the GUI Kernel manager. Pause if the forum sticky flags issues.</li>
+        <li><strong>Fedora:</strong> <code>sudo dnf upgrade --refresh</code> or enable <code>akmods</code> if you need Nvidia modules rebuilt.</li>
+        <li><strong>Ubuntu/Mint:</strong> Install HWE kernels via <code>sudo apt install --install-recommends linux-generic-hwe-24.04</code>.</li>
+      </ul>
+
+      <h2>4. Rollback tactics</h2>
+      <ol>
+        <li>Select the previous kernel from GRUB (Shift key at boot) or from systemd-boot&rsquo;s menu.</li>
+        <li>If the distro still boots, remove the bad kernel: <code>sudo pacman -R linux</code> (keeping linux-lts) or <code>sudo apt remove linux-image-6.8.0-xx</code>.</li>
+        <li>Restore from snapshots via Timeshift/Snapper if the bootloader breaks.</li>
+      </ol>
+
+      <h2>5. Document everything</h2>
+      <p>Track kernel versions, module rebuild commands, and driver tweaks in a simple markdown file. Reference it when tuning with the <a href="/guides/linux-performance-tuning-2025.html">Performance guide</a> or when you revisit the <a href="../compare.html">compare matrix</a>.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p>Made by Saif &middot;  </p>
+      <p class="last-updated" data-last-updated="November 14, 2025">Last updated November 14, 2025</p>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html#about">About</a>
+      <a href="mailto:hello@bestlinuxdistros.com">Contact</a>
+      <a href="../index.html#privacy">Privacy</a>
+      <a href="../sitemap.xml">Sitemap</a>
+      <a href="https://github.com/bestlinuxdistros" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="footer-note">&copy; 2025 BestLinuxDistros.com &mdash; Open-Source Project. Made for Linux users, by Linux users.</p>
+  </footer>
+  <script src="../js/distro-data.js" defer></script>
+  <script src="../js/app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Linux Kernel Update Guide",
+    "description": "Backup, install, and roll back Linux kernel updates on LTS and rolling distributions.",
+    "step": [
+      {"@type": "HowToStep", "name": "Snapshot system", "text": "Use Timeshift, Snapper, or btrbk before installing kernels."},
+      {"@type": "HowToStep", "name": "Install kernel updates", "text": "Run pacman, dnf, or apt commands depending on distro."},
+      {"@type": "HowToStep", "name": "Rollback if needed", "text": "Boot previous kernel or restore from snapshot."}
+    ],
+    "url": "https://bestlinuxdistros.com/tools/kernel-update-guide.html"
+  }
+  </script>
+</body>
+</html>

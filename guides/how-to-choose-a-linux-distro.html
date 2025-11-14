@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Choose a Linux Distro | bestlinuxdistros.com</title>
+  <meta name="description" content="Use a repeatable framework to choose the perfect Linux distro based on hardware, use-case, release cadence, and support expectations. Links to the bestlinuxdistros.com catalog for deeper research." />
+  <meta name="keywords" content="how to choose a linux distro, linux distro decision matrix, linux hardware requirements, rolling release vs lts" />
+  <meta property="og:title" content="How to Choose a Linux Distro" />
+  <meta property="og:description" content="Follow a decision framework that scores hardware fit, workflow, and family familiarity before you commit to your next Linux distro." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://bestlinuxdistros.com/guides/how-to-choose-a-linux-distro.html" />
+  <meta property="og:image" content="https://bestlinuxdistros.com/assets/og-card.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://bestlinuxdistros.com/guides/how-to-choose-a-linux-distro.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="page guide-article">
+  <header class="site-header floating">
+    <div class="logo-mark"><a href="../index.html">bestlinuxdistros<span class="dot">.com</span></a></div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../distros.html">Distros</a>
+      <a href="../compare.html">Compare</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="index.html">Guides</a>
+      <a href="../tools/index.html">Tools</a>
+      <a href="../distros.html#search" data-nav-search>Search</a>
+    </nav>
+  </header>
+
+  <main class="guides-main">
+    <section class="guide-hero">
+      <p class="muted-label">Decision Support</p>
+      <h1>How to Choose a Linux Distro</h1>
+      <p class="lede">Choosing a distro is easier when you stack-rank hardware compatibility, release cadence, support expectations, and package workflow. This framework mirrors the filters on our <a href="../distros.html">catalog page</a>.</p>
+    </section>
+
+    <article class="prose">
+      <h2 id="inputs">1. Capture your inputs</h2>
+      <p>Create a simple spreadsheet with these columns:</p>
+      <ul>
+        <li><strong>Hardware tier:</strong> CPU generation, RAM ceiling, GPU vendor. Reference the <em>Hardware requirements</em> table inside each detail page.</li>
+        <li><strong>Primary use-case:</strong> Desktop, developer, security, server, media center, etc.</li>
+        <li><strong>Release cadence tolerance:</strong> LTS, semi-annual, rolling.</li>
+        <li><strong>Package preference:</strong> APT, DNF, Pacman, Flatpak-first, etc.</li>
+        <li><strong>Support surface:</strong> Corporate SLA, community forum, Discord, documentation.</li>
+      </ul>
+      <p>Scoring each dimension 1&ndash;5 makes it easy to compare distros side by side inside the <a href="../compare.html">Compare view</a>.</p>
+
+      <h2 id="hardware">2. Filter by hardware first</h2>
+      <p>Hardware eliminates options faster than anything else. Examples:</p>
+      <ul>
+        <li>Low-RAM laptops gravitate toward <a href="../distros/mxlinux.html">MX Linux</a> or <a href="../distros/peppermint.html">Peppermint</a>.</li>
+        <li>AVX-512 or 12th-gen Intel rigs can justify <a href="../distros/clearlinux.html">Clear Linux</a>.</li>
+        <li>Ryzen/Nvidia hybrids benefit from distros with graphics toggles such as <a href="../distros/popos.html">Pop!_OS</a>.</li>
+      </ul>
+      <p>Use the <a href="/tools/hardware-compatibility-checker.html">hardware checker</a> to compare your specs to each distro&rsquo;s minimums.</p>
+
+      <h2 id="usecase">3. Map to use-case families</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Use-case</th>
+            <th>Traits</th>
+            <th>Starter Distros</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Beginner desktop</td>
+            <td>LTS, GUI helpers, large community.</td>
+            <td><a href="../distros/ubuntu.html">Ubuntu</a>, <a href="../distros/mint.html">Linux Mint</a>, <a href="../distros/zorin.html">Zorin OS</a></td>
+          </tr>
+          <tr>
+            <td>Developer workstation</td>
+            <td>Fresh toolchains, container tooling, fast updates.</td>
+            <td><a href="../distros/fedora.html">Fedora</a>, <a href="../distros/arch.html">Arch Linux</a>, <a href="../distros/nixos.html">NixOS</a></td>
+          </tr>
+          <tr>
+            <td>Security lab</td>
+            <td>Preloaded tooling, isolation, rolling packages.</td>
+            <td><a href="../distros/kali.html">Kali</a>, <a href="../distros/parrot.html">Parrot</a>, <a href="../distros/qubes.html">Qubes OS</a></td>
+          </tr>
+          <tr>
+            <td>Server / Homelab</td>
+            <td>Stable kernels, long lifecycle, predictable updates.</td>
+            <td><a href="../distros/debian.html">Debian</a>, <a href="../distros/rhel.html">RHEL</a>, <a href="../distros/almalinux.html">AlmaLinux</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="cadence">4. Decide on release cadence</h2>
+      <p>Cadence influences maintenance load:</p>
+      <ul>
+        <li><strong>LTS:</strong> Fewer upgrades. Great for <a href="../distros/ubuntu.html">Ubuntu LTS</a>, <a href="../distros/debian.html">Debian</a>, <a href="../distros/mint.html">Mint</a>.</li>
+        <li><strong>Semi-annual:</strong> Fedora-style, with 13-month support windows.</li>
+        <li><strong>Rolling:</strong> <a href="../distros/arch.html">Arch</a>, <a href="../distros/endeavouros.html">EndeavourOS</a>, <a href="../distros/clearlinux.html">Clear Linux</a> deliver latest kernels but demand snapshots.</li>
+      </ul>
+      <p>Our <a href="/tools/kernel-update-guide.html">Kernel Update Guide</a> explains how to upgrade safely regardless of cadence.</p>
+
+      <h2 id="shortlist">5. Shortlist and test</h2>
+      <p>Once you have 2&ndash;4 viable candidates:</p>
+      <ol>
+        <li>Add them to the <a href="../compare.html">Compare</a> tray for a matrix view.</li>
+        <li>Create live USBs and run them for a full workday to confirm driver support.</li>
+        <li>Document the commands you run most, then skim the <a href="/tools/package-manager-cheatsheet.html">Package Manager Cheatsheet</a> to see what muscle memory needs to change.</li>
+        <li>Decide which community you trust: if you value official docs, Debian/Fedora families win; if you need Discord immediacy, look at Manjaro or Garuda.</li>
+      </ol>
+      <p>When you commit, note the date and installer version so you can undo if the experience regresses.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p>Made by Saif &middot;  </p>
+      <p class="last-updated" data-last-updated="November 14, 2025">Last updated November 14, 2025</p>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html#about">About</a>
+      <a href="mailto:hello@bestlinuxdistros.com">Contact</a>
+      <a href="../index.html#privacy">Privacy</a>
+      <a href="../sitemap.xml">Sitemap</a>
+      <a href="https://github.com/bestlinuxdistros" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="footer-note">&copy; 2025 BestLinuxDistros.com &mdash; Open-Source Project. Made for Linux users, by Linux users.</p>
+  </footer>
+  <script src="../js/distro-data.js" defer></script>
+  <script src="../js/app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "How to Choose a Linux Distro",
+    "description": "A decision framework for selecting Linux distributions based on hardware, use-case, release cadence, and package tooling.",
+    "datePublished": "2025-11-14",
+    "dateModified": "2025-11-14",
+    "author": { "@type": "Organization", "name": "bestlinuxdistros.com" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "bestlinuxdistros.com",
+      "logo": { "@type": "ImageObject", "url": "https://bestlinuxdistros.com/assets/og-card.png" }
+    },
+    "image": "https://bestlinuxdistros.com/assets/og-card.png",
+    "url": "https://bestlinuxdistros.com/guides/how-to-choose-a-linux-distro.html"
+  }
+  </script>
+</body>
+</html>

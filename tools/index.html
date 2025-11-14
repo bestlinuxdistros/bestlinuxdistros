@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linux Tools Hub | bestlinuxdistros.com</title>
+  <meta name="description" content="Centralize the manual tools, checklists, and cheatsheets that complement the bestlinuxdistros.com catalog. Compare hardware requirements, package managers, kernels, and filesystems." />
+  <meta name="keywords" content="linux tools hub, linux hardware checker, package manager cheatsheet, kernel update guide, linux filesystem explained" />
+  <meta property="og:title" content="Linux Tools Hub | bestlinuxdistros.com" />
+  <meta property="og:description" content="Access static Linux tools for hardware compatibility, package manager commands, kernel updates, and filesystem planning." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bestlinuxdistros.com/tools/" />
+  <meta property="og:image" content="https://bestlinuxdistros.com/assets/og-card.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://bestlinuxdistros.com/tools/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="page tools">
+  <header class="site-header floating">
+    <div class="logo-mark"><a href="../index.html">bestlinuxdistros<span class="dot">.com</span></a></div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="../distros.html">Distros</a>
+      <a href="../compare.html">Compare</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../guides/index.html">Guides</a>
+      <a href="index.html">Tools</a>
+      <a href="../distros.html#search" data-nav-search>Search</a>
+    </nav>
+  </header>
+
+  <main class="tools-main">
+    <section class="tools-hero">
+      <p class="muted-label">bestlinuxdistros.com/tools</p>
+      <h1>Linux Tools Hub</h1>
+      <p class="lede">These zero-JavaScript tools provide worksheets, checklists, and comparison tables that complement the live <a href="../distros.html">distro data</a>. Bookmark them when you&rsquo;re onboarding teammates or documenting homelab standards.</p>
+    </section>
+
+    <section class="tool-card-grid" aria-label="Tools list">
+      <article class="tool-card">
+        <p class="muted-label">Hardware Planning</p>
+        <h3><a href="hardware-compatibility-checker.html">Hardware Compatibility Checker</a></h3>
+        <p>Compare your CPU/RAM/storage against distro requirements and jot down upgrade action items.</p>
+        <a class="link-arrow" href="hardware-compatibility-checker.html">View tool &rsaquo;</a>
+      </article>
+
+      <article class="tool-card">
+        <p class="muted-label">CLI Reference</p>
+        <h3><a href="package-manager-cheatsheet.html">Package Manager Cheatsheet</a></h3>
+        <p>APT, DNF, Pacman, and Zypper commands side by side so you can context-switch faster.</p>
+        <a class="link-arrow" href="package-manager-cheatsheet.html">View tool &rsaquo;</a>
+      </article>
+
+      <article class="tool-card">
+        <p class="muted-label">Maintenance</p>
+        <h3><a href="kernel-update-guide.html">Kernel Update Guide</a></h3>
+        <p>Upgrade kernels safely on rolling or LTS distros and know when to hold back.</p>
+        <a class="link-arrow" href="kernel-update-guide.html">View tool &rsaquo;</a>
+      </article>
+
+      <article class="tool-card">
+        <p class="muted-label">Storage Primer</p>
+        <h3><a href="linux-filesystem-explained.html">Linux Filesystem Explained</a></h3>
+        <p>Understand EXT4, Btrfs, XFS, and ZFS trade-offs before you image your next workstation or server.</p>
+        <a class="link-arrow" href="linux-filesystem-explained.html">View tool &rsaquo;</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p>Made by Saif &middot;  </p>
+      <p class="last-updated" data-last-updated="November 14, 2025">Last updated November 14, 2025</p>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html#about">About</a>
+      <a href="mailto:hello@bestlinuxdistros.com">Contact</a>
+      <a href="../index.html#privacy">Privacy</a>
+      <a href="../sitemap.xml">Sitemap</a>
+      <a href="https://github.com/bestlinuxdistros" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="footer-note">&copy; 2025 BestLinuxDistros.com &mdash; Open-Source Project. Made for Linux users, by Linux users.</p>
+  </footer>
+  <script src="../js/distro-data.js" defer></script>
+  <script src="../js/app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Linux Tools Hub",
+    "description": "Static worksheets and reference material for hardware planning, kernel updates, package managers, and filesystems.",
+    "url": "https://bestlinuxdistros.com/tools/",
+    "image": "https://bestlinuxdistros.com/assets/og-card.png",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "url": "https://bestlinuxdistros.com/tools/hardware-compatibility-checker.html", "name": "Hardware Compatibility Checker"},
+        {"@type": "ListItem", "position": 2, "url": "https://bestlinuxdistros.com/tools/package-manager-cheatsheet.html", "name": "Package Manager Cheatsheet"},
+        {"@type": "ListItem", "position": 3, "url": "https://bestlinuxdistros.com/tools/kernel-update-guide.html", "name": "Kernel Update Guide"},
+        {"@type": "ListItem", "position": 4, "url": "https://bestlinuxdistros.com/tools/linux-filesystem-explained.html", "name": "Linux Filesystem Explained"}
+      ]
+    }
+  }
+  </script>
+</body>
+</html>

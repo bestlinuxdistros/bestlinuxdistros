@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compare Linux Distros | BESTLINUXDISTROS</title>
+  <meta name="description" content="Compare up to four curated Linux distributions side by side and review release cadence, hardware needs, desktop environments, and benchmarks." />
+  <meta name="keywords" content="compare Linux distros, Linux distro comparison, release cadence, hardware requirements, package manager comparison" />
+  <meta property="og:title" content="Compare Linux Distros | BESTLINUXDISTROS" />
+  <meta property="og:description" content="Side-by-side comparison for up to four curated Linux distributions with hardware, release, and benchmark data." />
+  <meta property="og:url" content="https://bestlinuxdistros.com/compare.html" />
+  <meta property="og:image" content="https://bestlinuxdistros.com/assets/og-card.png" />
+  <link rel="canonical" href="https://bestlinuxdistros.com/compare.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page compare">
+  <header class="site-header floating">
+    <div class="logo-mark"><a href="index.html">bestlinuxdistros<span class="dot">.com</span></a></div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="site-nav">
+      <a href="index.html">Home</a>
+      <a href="distros.html">Distros</a>
+      <a href="compare.html">Compare</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="guides/index.html">Guides</a>
+      <a href="tools/index.html">Tools</a>
+      <a href="distros.html#search" data-nav-search>Search</a>
+    </nav>
+  </header>
+  <main class="compare-main">
+    <section class="compare-intro">
+      <h1>Compare Linux distros without guesswork</h1>
+      <p>Queue up to four distros from the catalog or picker to review release cadence, hardware needs, desktop environments, and benchmark notes in one view.</p>
+    </section>
+
+    <section class="hero terminal">
+      <div class="terminal-chrome">
+        <span class="dot-red"></span>
+        <span class="dot-yellow"></span>
+        <span class="dot-green"></span>
+      </div>
+      <h2>Live matrix powered by the same dataset</h2>
+      <p class="lede">Selections stay in sync with the catalog and detail pages, so you never have to copy notes between tabs.</p>
+    </section>
+
+    <section class="compare-card">
+      <div class="section-heading">
+        <h2>Build your compare list</h2>
+        <p>Add distros from the dropdown or from the catalog tray. You can keep up to four selections at a time.</p>
+      </div>
+      <form class="compare-form" id="compareForm">
+        <label class="visually-hidden" for="compareSelect">Select distro to add</label>
+        <select id="compareSelect" class="select-control"></select>
+        <button class="primary-btn" type="submit">Add distro</button>
+        <button class="ghost-btn" id="clearCompareForm" type="button">Clear all</button>
+      </form>
+      <p class="compare-helper">Selections sync with the floating tray on the catalog page so you can jump back and forth without losing progress.</p>
+      <div class="selected-chips" id="selectedChips"></div>
+    </section>
+
+    <section class="compare-card">
+      <div class="section-heading">
+        <h2>Side-by-side matrix</h2>
+        <p id="compareHint">Select up to four distros from the catalog queue or the selector above to populate this table.</p>
+      </div>
+      <div class="compare-table-wrapper">
+        <table class="compare-table" id="compareTable">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+    <footer class="site-footer">
+    <div>
+      <p>Made by Saif &middot;  </p>
+      <p class="last-updated" data-last-updated="November 14, 2025">Last updated November 14, 2025</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html#about">About</a>
+      <a href="mailto:hello@bestlinuxdistros.com">Contact</a>
+      <a href="index.html#privacy">Privacy</a>
+      <a href="sitemap.xml">Sitemap</a>
+      <a href="https://github.com/bestlinuxdistros" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="footer-note">&copy; 2025 BestLinuxDistros.com &mdash; Open-Source Project. Made for Linux users, by Linux users.</p>
+  </footer>
+  <script src="js/distro-data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
